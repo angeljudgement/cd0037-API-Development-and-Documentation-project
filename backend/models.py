@@ -13,7 +13,7 @@ DB_NAME = os.environ.get("DB_NAME")
 STUDENT_TOKEN = os.environ.get("STUDENT_TOKEN")
 INSTRUCTOR_TOKEN = os.environ.get("INSTRUCTOR_TOKEN")
 
-database_path ="postgres://{}:{}@{}/{}".format(DB_USER, DB_PASSWORD,'localhost:5432', DB_NAME)
+database_path = os.environ.get("DB_PATH")
 
 db = SQLAlchemy()
 
