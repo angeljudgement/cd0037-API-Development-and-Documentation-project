@@ -2,9 +2,18 @@ import os
 from sqlalchemy import Column, String, Integer, create_engine
 from flask_sqlalchemy import SQLAlchemy
 import json
+import dotenv
+dotenv.load_dotenv()
+import os
 
-database_name = 'trivia'
-database_path = 'postgresql://{}/{}'.format('localhost:5432', database_name)
+DB_USER = os.environ.get("DB_USER")
+DB_PASSWORD = os.environ.get("DB_PASSWORD")
+DB_NAME_TEST = os.environ.get("DB_NAME_TEST")
+DB_NAME = os.environ.get("DB_NAME")
+STUDENT_TOKEN = os.environ.get("STUDENT_TOKEN")
+INSTRUCTOR_TOKEN = os.environ.get("INSTRUCTOR_TOKEN")
+
+database_path ="postgres://{}:{}@{}/{}".format(DB_USER, DB_PASSWORD,'localhost:5432', DB_NAME)
 
 db = SQLAlchemy()
 
@@ -29,7 +38,7 @@ class Question(db.Model):
     id = Column(Integer, primary_key=True)
     question = Column(String)
     answer = Column(String)
-    category = Column(String)
+    category = Column(Integer)
     difficulty = Column(Integer)
 
     def __init__(self, question, answer, category, difficulty):
