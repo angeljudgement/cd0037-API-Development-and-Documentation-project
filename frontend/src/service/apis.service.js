@@ -29,7 +29,7 @@ class QuizzesApisService {
   createQuestion = (question) => {
     return $.ajax({
       ...this.createRequestHeader(),
-      url: "/questions", //TODO: update request URL
+      url: this.url + "/questions", //TODO: update request URL
       type: "POST",
       data: JSON.stringify({
         question: question.question,
@@ -55,7 +55,7 @@ class QuizzesApisService {
   updateQuestion = (question) => {
     return $.ajax({
       ...this.createRequestHeader(),
-      url: `/questions/${this.id}`, //TODO: update request URL
+      url: this.url + `/questions/${this.id}`, //TODO: update request URL
       type: "PATCH",
       data: JSON.stringify({
         question: question.question,
@@ -81,7 +81,7 @@ class QuizzesApisService {
   getQuestion = (page) => {
     return $.ajax({
       ...this.createRequestHeader(),
-      url: `/questions?page=${page}`, //TODO: update request URL
+      url: this.url + `/questions?page=${page}`, //TODO: update request URL
       type: "GET",
       success: (result) => {
         return result;
@@ -101,7 +101,7 @@ class QuizzesApisService {
   getQuestionById = (page) => {
     return $.ajax({
       ...this.createRequestHeader(),
-      url: `/question/${this.id}`, //TODO: update request URL
+      url: this.url + `/question/${this.id}`, //TODO: update request URL
       type: "GET",
       success: (result) => {
         return result;
@@ -121,7 +121,7 @@ class QuizzesApisService {
   getByCategory = (id) => {
     return $.ajax({
       ...this.createRequestHeader(),
-      url: `/categories/${id}/questions`, //TODO: update request URL
+      url: this.url + `/categories/${id}/questions`, //TODO: update request URL
       type: "GET",
       success: (result) => {
         return result;
@@ -141,7 +141,7 @@ class QuizzesApisService {
   getCategory = () => {
     return $.ajax({
       ...this.createRequestHeader(),
-      url: `/categories`, //TODO: update request URL
+      url: this.url + `/categories`, //TODO: update request URL
       type: "GET",
       success: (result) => {
         return result;
@@ -161,7 +161,7 @@ class QuizzesApisService {
   submitSearch = (searchTerm) => {
     return $.ajax({
       ...this.createRequestHeader(),
-      url: `/questions/search`, //TODO: update request URL
+      url: this.url + `/questions/search`, //TODO: update request URL
       type: "POST",
       data: JSON.stringify({ searchTerm: searchTerm }),
       success: (result) => {
@@ -182,7 +182,7 @@ class QuizzesApisService {
   deleteQuestion = (id) => {
     return $.ajax({
       ...this.createRequestHeader(),
-      url: `/questions/${id}`, //TODO: update request URL
+      url: this.url + `/questions/${id}`, //TODO: update request URL
       type: "DELETE",
       success: (result) => {
         return result;
@@ -202,7 +202,7 @@ class QuizzesApisService {
   getQuizzes = (previousQuestions, quizCategoryId) => {
     return $.ajax({
       ...this.createRequestHeader(),
-      url: "/quizzes", //TODO: update request URL
+      url: this.url + "/quizzes", //TODO: update request URL
       type: "POST",
       data: JSON.stringify({
         previous_questions: previousQuestions,
