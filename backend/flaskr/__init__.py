@@ -40,7 +40,7 @@ def create_app(test_config=None):
         return response
 
     @app.route('/categories', methods=['GET'])
-    def retrieve_categories(payload):
+    def retrieve_categories():
         try:
             queryCategory = Category.query.order_by(Category.id).all()   
         except Exception:
@@ -61,7 +61,7 @@ def create_app(test_config=None):
         )
 
     @app.route('/questions', methods=['GET'])
-    def retrieve_questions(payload):
+    def retrieve_questions():
         categoryParams = request.args.get('category', type=int)
         if categoryParams is None:
             try:
@@ -197,7 +197,7 @@ def create_app(test_config=None):
             print(e)
 
     @app.route('/questions/search', methods=["POST"])
-    def search_questions(payload):
+    def search_questions():
         body = request.get_json()
         if (body == None or 'searchTerm' not in body or body['searchTerm'] == ''):
             try:
