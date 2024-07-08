@@ -15,12 +15,12 @@ class App extends Component {
     super();
     this.auth.load_jwts();
     this.auth.check_token_fragment();
-    if (
-      !AuthService.activeJWT() &&
-      !document.location.href.includes("/login")
-    ) {
-      document.location.href = "/login";
-    }
+    // if (
+    //   !AuthService.activeJWT() &&
+    //   !document.location.href.includes("/login")
+    // ) {
+    //   document.location.href = "/login";
+    // }
   }
   render() {
     return (
