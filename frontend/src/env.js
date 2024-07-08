@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  apiServerUrl: 'http://127.0.0.1:5000', // the running FLASK api server url
+  apiServerUrl: 'https://cd0037-api-development-and-documentation.onrender.com', // the running FLASK api server url
   auth0: {
     url: 'dev-8qytb52luzve8pdy.us', // the auth0 domain prefix
     audience: 'quizzes', // the audience set for the auth0 app
