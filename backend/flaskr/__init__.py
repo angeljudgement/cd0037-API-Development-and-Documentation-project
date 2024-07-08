@@ -40,7 +40,6 @@ def create_app(test_config=None):
         return response
 
     @app.route('/categories', methods=['GET'])
-    @requires_auth('get:quizzes')
     def retrieve_categories(payload):
         try:
             queryCategory = Category.query.order_by(Category.id).all()   
@@ -62,7 +61,6 @@ def create_app(test_config=None):
         )
 
     @app.route('/questions', methods=['GET'])
-    @requires_auth('get:quizzes')
     def retrieve_questions(payload):
         categoryParams = request.args.get('category', type=int)
         if categoryParams is None:
@@ -199,7 +197,6 @@ def create_app(test_config=None):
             print(e)
 
     @app.route('/questions/search', methods=["POST"])
-    @requires_auth('get:quizzes')
     def search_questions(payload):
         body = request.get_json()
         if (body == None or 'searchTerm' not in body or body['searchTerm'] == ''):

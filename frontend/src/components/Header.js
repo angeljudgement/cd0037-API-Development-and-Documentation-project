@@ -32,15 +32,13 @@ class Header extends Component {
         >
           Udacitrivia
         </h1>
-        {this.decode.permissions.includes(permission.get) && (
-          <h2
-            onClick={() => {
-              this.navTo("");
-            }}
-          >
-            List
-          </h2>
-        )}
+        <h2
+          onClick={() => {
+            this.navTo("");
+          }}
+        >
+          List
+        </h2>
         {this.decode.permissions.includes(permission.post) && (
           <h2
             onClick={() => {
