@@ -43,7 +43,7 @@ class QuizzesApisService {
       error: (error) => {
         alert("Unable to add question. Please try your request again");
         if (error.statusCode().status === 401) {
-          document.location.href = "/login";
+          document.location.href = "/";
         } else {
           document.location.href = "/";
         }
@@ -68,7 +68,7 @@ class QuizzesApisService {
       },
       error: (error) => {
         if (error.statusCode().status === 401) {
-          document.location.href = "/login";
+          document.location.href = "/";
         } else {
           alert("Unable to add question. Please try your request again");
           document.location.href = "/";
@@ -88,7 +88,7 @@ class QuizzesApisService {
       },
       error: (error) => {
         if (error.statusCode().status === 401) {
-          document.location.href = "/login";
+          document.location.href = "/";
         } else {
           alert("Unable to load questions. Please try your request again");
           document.location.href = "/";
@@ -108,7 +108,7 @@ class QuizzesApisService {
       },
       error: (error) => {
         if (error.statusCode().status === 401) {
-          document.location.href = "/login";
+          document.location.href = "/";
         } else {
           alert("Unable to load questions. Please try your request again");
           document.location.href = "/";
@@ -129,7 +129,7 @@ class QuizzesApisService {
       error: (error) => {
         alert("Unable to load questions. Please try your request again");
         if (error.statusCode().status === 401) {
-          document.location.href = "/login";
+          document.location.href = "/";
         } else {
           document.location.href = "/";
         }
@@ -148,7 +148,7 @@ class QuizzesApisService {
       },
       error: (error) => {
         if (error.statusCode().status === 401) {
-          document.location.href = "/login";
+          document.location.href = "/";
         } else {
           alert("Unable to load categories. Please try your request again");
           document.location.href = "/";
@@ -169,7 +169,7 @@ class QuizzesApisService {
       },
       error: (error) => {
         if (error.statusCode().status === 401) {
-          document.location.href = "/login";
+          document.location.href = "/";
         } else {
           alert("Unable to load questions. Please try your request again");
           document.location.href = "/";
@@ -189,7 +189,7 @@ class QuizzesApisService {
       },
       error: (error) => {
         if (error.statusCode().status === 401) {
-          document.location.href = "/login";
+          document.location.href = "/]";
         } else {
           alert("Unable to load questions. Please try your request again");
           document.location.href = "/";
@@ -214,7 +214,7 @@ class QuizzesApisService {
       error: (error) => {
         alert("Unable to load question. Please try your request again");
         if (error.statusCode().status === 401) {
-          document.location.href = "/login";
+          document.location.href = "/";
         } else {
           document.location.href = "/";
         }

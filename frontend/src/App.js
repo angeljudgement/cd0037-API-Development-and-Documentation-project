@@ -32,7 +32,7 @@ class App extends Component {
             <Route path="/add" component={FormView} />
             <Route path="/edit/:id" component={FormView} />
             <Route path="/play" component={QuizView} />
-            <Route path="/login" component={Login} />
+            {/* <Route path="/login" component={Login} /> */}
             <Route component={QuestionView} />
           </Switch>
         </Router>

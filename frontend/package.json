@@ -2,7 +2,6 @@
   "name": "trivia-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://cd0037-api-development-and-documentation.onrender.com",
   "homepage" : "https://cd0037-api-development-and-documentation-5rtw.onrender.com/",
   "dependencies": {
     "corsproxy": "^1.5.0",

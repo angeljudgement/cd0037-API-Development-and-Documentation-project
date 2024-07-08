@@ -61,7 +61,7 @@ class Header extends Component {
           <h2
             onClick={() => {
               this.auth.logout();
-              window.location.href = this.auth.build_logout_link("/login");
+              window.location.href = this.auth.build_logout_link("/");
             }}
             style={{ justifySelf: "flex-end" }}
           >
